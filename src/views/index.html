@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Santa App</title>
+    <meta name="description" content="A cool thing made with Glitch" />
+    <link
+      id="favicon"
+      rel="icon"
+      href="https://glitch.com/edit/favicon-app.ico"
+      type="image/x-icon"
+    />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .form-container {
+        width: 100%;
+        max-width: 480px;
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.12);
+      }
+      .form {
+        padding: 15px;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      h1 {
+        text-align: center;
+        color: rgb(52, 11, 167);
+      }
+      label {
+        font-weight: bold;
+      }
+      input,
+      textarea {
+        padding: 12px;
+        border-radius: 6px;
+        border: 1px solid lightgray;
+        resize: vertical;
+      }
+      .submit-button {
+        padding: 0.5rem;
+        border-radius: 6px;
+        border: 1px solid lightgray;
+        cursor: pointer;
+        background-color: white;
+        transition: background-color 0.2s ease-in-out;
+      }
+      .submit-button:hover {
+        background-color: lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h1>Send a letter to Santa</h1>
+      <form class="form" action="/" method="POST">
+        <label for="username">Who are you?</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="charlie.brown"
+          required
+        />
+
+        <label for="wish">what do you want for christmas?</label>
+        <textarea
+          id="wish"
+          name="wish"
+          placeholder="Gifts!"
+          required
+          rows="4"
+        ></textarea>
+
+        <button class="submit-button" type="submit">Send</button>
+      </form>
+    </div>
+  </body>
+</html>
